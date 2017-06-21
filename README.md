@@ -4,4 +4,6 @@
 
 ## Usage
 
-`docker run docker.io/panubo/pflogsumm pflogsumm`
+```bash
+cat smtp.log | docker run --rm docker.io/panubo/pflogsumm > report.txt
+```
