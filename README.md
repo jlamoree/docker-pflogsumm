@@ -21,7 +21,7 @@ project="pflogsumm"
 username="$(whoami)"
 vault_item="docker-builder-access-token"
 
-if [ -z "$vault_item" ]; then
+if [ ! -z "$vault_item" ]; then
   op item get "$vault_item" --fields label=password | \
     docker login --username "$username" --password-stdin
 fi
